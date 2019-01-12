@@ -4,7 +4,7 @@ echo "Usage: \"`basename "$0"` <version>"
 
 cd `dirname "$0"`;
 
-docker swarm init &> /dev/null
+#docker swarm init &> /dev/null
 
 version=${1:-"latest"}
 registry=${2:-"backendless"}
