@@ -17,4 +17,4 @@ if [[ "$registry" == "backendless"  ]]; then
   ./pull.sh ${version} backendless
 fi
 
-./check_ports.sh
+#./check_ports.sh
