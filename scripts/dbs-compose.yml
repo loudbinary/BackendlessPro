@@ -14,7 +14,7 @@ services:
     - bkndls-net
     deploy:
       placement:
-        constraints: [node.role == worker
+        constraints: [node.role == worker]
 
   bl-redis-debug:
     image: redis:4
@@ -26,7 +26,7 @@ services:
     - bkndls-net
     deploy:
       placement:
-        constraints: [node.role == worker
+        constraints: [node.role == worker]
 
 
   bl-mysql:
