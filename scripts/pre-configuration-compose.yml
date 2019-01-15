@@ -20,4 +20,6 @@ services:
 
 networks:
   bkndls-net:
+    driver: overlay
+    attachable: true
 
