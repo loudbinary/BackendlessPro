@@ -35,5 +35,5 @@ env $env_file REGISTRY="${registry}" VERSION="${version}" MOUNTS="${mounts}" doc
 echo "starting services..."
 env $env_file REGISTRY="${registry}" VERSION="${version}" MOUNTS="${mounts}" docker stack deploy -c ./backendless-compose.yml bl-swarm
 
-env $env_file ./check_start.sh
+#env $env_file ./check_start.sh
 
