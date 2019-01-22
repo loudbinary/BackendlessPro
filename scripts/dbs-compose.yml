@@ -12,9 +12,6 @@ services:
     - ${MOUNTS}/redis/data:/data
     networks:
     - bkndls-net
-    deploy:
-      placement:
-        constraints: [node.role == worker]
 
   bl-redis-debug:
     image: redis:4
@@ -24,10 +21,6 @@ services:
     - "${BL_PROPERTY_config_redis_bl_debug_port}:${BL_PROPERTY_config_redis_bl_debug_port}"
     networks:
     - bkndls-net
-    deploy:
-      placement:
-        constraints: [node.role == worker]
-
 
   bl-mysql:
     image: mysql:5.7
@@ -44,10 +37,6 @@ services:
     - ${MOUNTS}/mysql/init:/docker-entrypoint-initdb.d
     networks:
     - bkndls-net
-    deploy:
-      placement:
-        constraints: [node.role == manager]
-
 
   bl-mongo:
     image: mongo:3.4.3
@@ -63,16 +52,9 @@ services:
     - ${MOUNTS}/mongo/data:/data/db
     networks:
     - bkndls-net
-    deploy:
-      placement:
-        constraints: [node.role == worker]
-
-
 
 #volumes:
 #  appData:
 
 networks:
   bkndls-net:
-
-
